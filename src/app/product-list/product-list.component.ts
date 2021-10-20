@@ -13,6 +13,10 @@ export class ProductListComponent {
   share() {
     window.alert('Awesome. You are clicking the share button!!');
   }
+
+  onNotify() {
+    window.alert('You will be notified when the product goes on sale');
+  }
 }
 
 //importa products del array de product.ts y luego lo exporta para usarlo en el componente products = products en donde luego voy a hacer un *nGFor

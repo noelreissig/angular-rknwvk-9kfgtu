@@ -2,14 +2,19 @@
 
 <div *ngFor="let product of products">
   <h3>
-    <a [title]="product.name + ' detailed'">{{ product.name }}</a>
+    <a
+      [title]="product.name + ' detailed'"
+      [routerLink]="['/products', product.id]"
+      >{{ product.name }}</a
+    >
   </h3>
   <p *ngIf="product.description">Description: {{ product.description }}</p>
 
   <button (click)="share()">Share content</button>
 
   <!--*aca estoy insertando el componenente hijo <app-product-alert>, y le paso product por props -->
-  <app-product-alerts [product]="product"> </app-product-alerts>
+  <app-product-alerts [product]="product" (notify)="onNotify()">
+  </app-product-alerts>
 </div>
 
 <!-- 
