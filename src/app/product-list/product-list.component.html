@@ -1,0 +1,19 @@
+<h2>Shopping List</h2>
+
+<div *ngFor="let product of products">
+  <h3>
+    <a [title]="product.name + ' detailed'">{{ product.name }}</a>
+  </h3>
+  <p *ngIf="product.description">Description: {{ product.description }}</p>
+
+  <button (click)="share()">Share content</button>
+
+  <!--*aca estoy insertando el componenente hijo <app-product-alert>, y le paso product por props -->
+  <app-product-alerts [product]="product"> </app-product-alerts>
+</div>
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->

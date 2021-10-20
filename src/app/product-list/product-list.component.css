@@ -1,0 +1,14 @@
+div {
+  border: 1px rgb(109, 109, 109) solid;
+  padding: 0 15px 15px 15px;
+  margin-bottom: 20px;
+}
+
+a {
+  color: rgb(99, 148, 103);
+}
+/*
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+*/
